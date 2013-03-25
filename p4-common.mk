@@ -67,8 +67,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     media.stagefright.cache-params=6144/-1/30 \
     ro.sf.lcd_density=160 \
     dalvik.vm.dexopt-data-only=1 \
-    dalvik.vm.heapminfree=512k \
-    windowsmgr.max_events_per_sec=240
+    dalvik.vm.heapminfree=512k
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
