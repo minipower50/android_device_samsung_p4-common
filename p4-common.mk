@@ -150,5 +150,5 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
         system/extras/bugmailer/send_bug:system/bin/send_bug
 endif
 
-$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
