@@ -37,10 +37,6 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
 
-ifneq (,$(filter true 1,$(TARGET_INCLUDE_EXTRA_CFLAGS)))
-TARGET_EXTRA_CFLAGS := $(call cc-option,-march=armv7-a) $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9) $(call cc-option,-marm)
-endif
-
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_CMDLINE := 
 BOARD_PAGE_SIZE := 2048
