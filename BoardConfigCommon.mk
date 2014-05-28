@@ -137,3 +137,4 @@ TW_NO_EXFAT_FUSE := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/cmc623_pwm_bl/backlight/pwm-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_NO_EXFAT := true
+TW_EXCLUDE_SUPERSU := true
