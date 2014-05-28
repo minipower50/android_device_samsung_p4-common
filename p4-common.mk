@@ -145,5 +145,8 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 
+# Recovery
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
