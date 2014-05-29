@@ -80,6 +80,7 @@ BOARD_HAS_SDCARD_INTERNAL := true
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_ventana
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/p4-common
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Wifi related defines
