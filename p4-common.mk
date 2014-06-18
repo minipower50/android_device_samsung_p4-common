@@ -68,7 +68,16 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.bq.gpu_to_cpu_unsupported=1 \
     dalvik.vm.dexopt-data-only=1 \
     dalvik.vm.debug.alloc=0 \
-    debug.hwui.render_dirty_regions=false
+    debug.hwui.render_dirty_regions=false \
+    ro.zygote.disable_gl_preload=true
+
+# Disable SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.selinux=disabled \
+    ro.build.selinux=0
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
@@ -89,7 +98,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
         audio.a2dp.default \
-	audio.usb.default \
+        audio.usb.default \
         libaudioutils \
         libtinyalsa
 
@@ -139,8 +148,8 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	make_ext4fs \
-	setup_fs
+    make_ext4fs \
+    setup_fs
 
 DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
