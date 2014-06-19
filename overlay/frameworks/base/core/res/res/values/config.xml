@@ -23,6 +23,8 @@
 
     <bool name="config_showNavigationBar">true</bool>
 
+    <bool name="config_animateScreenLights">false</bool>
+
     <bool name="config_batterySdCardAccessibility">true</bool>
 
     <bool name="config_sf_limitedAlpha">false</bool>
@@ -102,10 +104,13 @@
    <!-- Boolean indicating whether the wifi chipset has background scan support -->
    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
 
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
+    <!-- Boolean indicating whether the wifi chipset has p2p support
+    <bool translatable="false" name="config_wifi_p2p_support">true</bool> -->
 
-    <!-- True will enable the electron beam screen-off animation. -->
-    <bool name="config_screenOffAnimation">false</bool>
+    <!--<bool name="config_forceDisableHardwareKeyboard">true</bool> -->
+
+    <!-- True will enable the electron beam screen-off animation.
+    <bool name="config_screenOffAnimation">false</bool> -->
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">5</integer>

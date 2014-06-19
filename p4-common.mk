@@ -91,9 +91,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         libinvensense_mpl
 
-# Torch
+# Omni packages
 PRODUCT_PACKAGES += \
-        Torch
+        OmniTorch \
+        OmniSwitch
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -143,8 +144,7 @@ PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory \
     power.p3 \
-    libnetcmdiface \
-    WiFiDirectDemo
+    libnetcmdiface
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -158,4 +158,5 @@ DEVICE_PACKAGE_OVERLAYS := \
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
+# $(call inherit-product, vendor/omni/config/common_tablet.mk)
 
