@@ -27,10 +27,17 @@ TARGET_SCREEN_HEIGHT := 800
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/init.p3.rc:root/init.p3.rc \
-    $(LOCAL_PATH)/fstab.p3:root/fstab.p3 \
     $(LOCAL_PATH)/ueventd.p3.rc:root/ueventd.p3.rc \
     $(LOCAL_PATH)/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/init.p3.usb.rc:root/init.p3.usb.rc
+
+ifeq ($(F2FS_BUILD), true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.p3-f2fs:root/fstab.p3
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.p3:root/fstab.p3
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
@@ -155,7 +162,11 @@ DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 
 # Recovery
+ifeq ($(F2FS_BUILD), true)
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab-f2fs:recovery/root/etc/twrp.fstab
+else
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+endif
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
