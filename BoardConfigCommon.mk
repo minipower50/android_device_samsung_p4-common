@@ -96,7 +96,11 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_INITRC := device/samsung/p4-common/recovery/init.rc
 
 RECOVERY_FSTAB_VERSION := 2
+ifeq ($(F2FS_BUILD), true)
+TARGET_RECOVERY_FSTAB := device/samsung/p4-common/fstab.p3-f2fs
+else
 TARGET_RECOVERY_FSTAB := device/samsung/p4-common/fstab.p3
+endif
 
 # Indicate that the board has an Internal SD Card
 BOARD_HAS_SDCARD_INTERNAL := true
@@ -105,6 +109,7 @@ BOARD_HAS_SDCARD_INTERNAL := true
 #TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_ventana
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/p4-common
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Wifi related defines
