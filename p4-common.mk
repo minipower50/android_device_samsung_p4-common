@@ -98,11 +98,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         libinvensense_mpl
 
-# Omni packages
-PRODUCT_PACKAGES += \
-        OmniTorch \
-        OmniSwitch
-
 # Audio
 PRODUCT_PACKAGES += \
         audio.a2dp.default \
@@ -169,5 +164,4 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 endif
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
-# $(call inherit-product, vendor/omni/config/common_tablet.mk)
 
