@@ -132,5 +132,7 @@
     <!-- The duration (in milliseconds) of the activity open/close and fragment open/close animations. -->
     <integer name="config_activityShortDur">75</integer>
     <integer name="config_activityDefaultDur">145</integer>
+	
+    <!-- <bool name="config_forceDisableHardwareKeyboard">true</bool> -->
 
 </resources>
